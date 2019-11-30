@@ -6,7 +6,6 @@ spec:
   selector:
     app: flask-kubernetes
   ports:
-  - protocol: "TCP"
   - port: 6000
     targetPort: 5000
   type: LoadBalancer
