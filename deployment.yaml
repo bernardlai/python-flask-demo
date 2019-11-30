@@ -4,11 +4,11 @@ metadata:
   name: flask-kubernetes-service
 spec:
   selector:
-  app: flask-kubernetes
+    app: flask-kubernetes
   ports:
   - protocol: "TCP"
-  port: 6000
-  targetPort: 5000
+  - port: 6000
+    targetPort: 5000
   type: LoadBalancer
 
 ---
@@ -19,13 +19,13 @@ metadata:
 spec:
   replicas: 4
   template:
-  metadata:
-  labels:
-  app: flask-kubernetes
-  spec:
-  containers:
-  - name: flask-kubernetes
-  image: flash-kubernetes:latest
-  imagePullPolicy: Never
-  ports:
-  - containerPort: 5000 
+    metadata:
+      labels:
+        app: flask-kubernetes
+    spec:
+      containers:
+      - name: flask-kubernetes
+        image: flash-kubernetes:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000 
