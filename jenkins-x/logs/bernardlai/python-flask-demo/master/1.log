@@ -1,0 +1,173 @@
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-xbtwh[0m
+{"level":"warn","ts":1575120050.1214972,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575120050.1220386,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-6rjbv[0m
+{"level":"warn","ts":1575120050.7854693,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1575120050.7869804,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-bernardlai-python-flask-demo-ma-xk7b7[0m
+{"level":"warn","ts":1575120094.2818975,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575120098.4813795,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/bernardlai/python-flask-demo.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:2b8e751a0033b9fcfebe8dcc19d4f1db23af1acb
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:3.7            
+2019/11/30 13:21:45 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Error while retrieving image from cache: getting file info: stat /workspace/sha256:c3224f1163e8c349b5f7345090c9753b58c779de446d79232859cc3a68d63167: no such file or directory 
+[36mINFO[0m[0003] Downloading base image python:3.7            
+2019/11/30 13:21:49 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0005] Checking for cached layer 172.16.79.192:5000/todo/cache:3345997b9c2cfef91d5e8a9b1acd426b072dbde7ba183357313ba55327126f65... 
+2019/11/30 13:21:51 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0006] No cached layer found for cmd RUN mkdir /app 
+[36mINFO[0m[0006] Unpacking rootfs as cmd RUN mkdir /app requires it. 
+[36mINFO[0m[0043] Taking snapshot of full filesystem...        
+[36mINFO[0m[0161] RUN mkdir /app                               
+[36mINFO[0m[0161] cmd: /bin/sh                                 
+[36mINFO[0m[0161] args: [-c mkdir /app]                        
+[36mINFO[0m[0161] Taking snapshot of full filesystem...        
+[36mINFO[0m[0169] WORKDIR /app                                 
+[36mINFO[0m[0169] cmd: workdir                                 
+[36mINFO[0m[0169] Changed working directory to /app            
+[36mINFO[0m[0169] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0169] Using files from context: [/workspace/source] 
+[36mINFO[0m[0169] Pushing layer 172.16.79.192:5000/todo/cache:3345997b9c2cfef91d5e8a9b1acd426b072dbde7ba183357313ba55327126f65 to cache now 
+[36mINFO[0m[0170] ADD . /app/                                  
+[36mINFO[0m[0170] Taking snapshot of files...                  
+[36mINFO[0m[0170] RUN pip install -r requirements.txt          
+[36mINFO[0m[0170] cmd: /bin/sh                                 
+[36mINFO[0m[0170] args: [-c pip install -r requirements.txt]   
+2019/11/30 13:24:36 pushed blob: sha256:44f6aadcf7465b211ddddffb0041678e069b3c2b1e6b1a5db75277fc19d6ffe6
+2019/11/30 13:24:36 pushed blob: sha256:90f74676d1e59921e073bf9cca3620acf3afc4eeb026d426e87ad25916744e8e
+2019/11/30 13:24:36 172.16.79.192:5000/todo/cache:3345997b9c2cfef91d5e8a9b1acd426b072dbde7ba183357313ba55327126f65: digest: sha256:53b1dad5fa3b1d5da02961451f329590fb8e0d802227fcde2773c723b98ec66e size: 424
+Collecting Flask==1.0
+  Downloading https://files.pythonhosted.org/packages/55/b1/4365193655df97227ace49311365cc296e74b60c7f5c63d23cd30175e2f6/Flask-1.0-py2.py3-none-any.whl (97kB)
+Collecting click>=5.1
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting Jinja2>=2.10
+  Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
+Collecting Werkzeug>=0.14
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+Collecting itsdangerous>=0.24
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting MarkupSafe>=0.23
+  Downloading https://files.pythonhosted.org/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl
+Installing collected packages: click, MarkupSafe, Jinja2, Werkzeug, itsdangerous, Flask
+Successfully installed Flask-1.0 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 click-7.0 itsdangerous-1.1.0
+[36mINFO[0m[0173] Taking snapshot of full filesystem...        
+[36mINFO[0m[0181] Pushing layer 172.16.79.192:5000/todo/cache:6be895ae2f783b78f86f7d2dd32b0c317f884c6088aa39994b0ddb75c747d64f to cache now 
+[36mINFO[0m[0181] EXPOSE 5000                                  
+[36mINFO[0m[0181] cmd: EXPOSE                                  
+[36mINFO[0m[0181] Adding exposed port: 5000/tcp                
+[36mINFO[0m[0181] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0181] CMD ["python","/app/main.py"]                
+[36mINFO[0m[0181] No files changed in this command, skipping snapshotting. 
+2019/11/30 13:24:47 pushed blob: sha256:942ebcfd61de3b91718c12d6cbe832995004eab4f91dedaabc9e19f73fff64f9
+2019/11/30 13:24:48 pushed blob: sha256:8e52726c7839111c9fdb8d64ea02861b7f3eeec266b3774319ed98e1296487bd
+2019/11/30 13:24:48 172.16.79.192:5000/todo/cache:6be895ae2f783b78f86f7d2dd32b0c317f884c6088aa39994b0ddb75c747d64f: digest: sha256:cb4787d2d823d66d3ed4c0ebe49e6341efea9cc281a349dc21cb91b06f3a7c9c size: 428
+2019/11/30 13:24:49 pushed blob: sha256:44f6aadcf7465b211ddddffb0041678e069b3c2b1e6b1a5db75277fc19d6ffe6
+2019/11/30 13:24:49 pushed blob: sha256:d7f481503603ce03e35482ddb6b09acf175f1c47eac28c7b1093fc970865d42f
+2019/11/30 13:24:49 pushed blob: sha256:d96aa1f11c2393afdf932498a5ff271423be7f3f56d0c9c917dfa51bd243e5b8
+2019/11/30 13:24:49 pushed blob: sha256:8e52726c7839111c9fdb8d64ea02861b7f3eeec266b3774319ed98e1296487bd
+2019/11/30 13:24:50 pushed blob: sha256:e92ae9350d4a47e5dcfbae78a0a06db3691fa602e93e7e6f6094ff187ca1cfd0
+2019/11/30 13:24:54 pushed blob: sha256:c648cb7fc575dd1e2a3b60c09fbac445bf8f182f5ae069a7e5aea4fba54c00fe
+2019/11/30 13:24:58 pushed blob: sha256:8659dae93050c1ac9ec02542a046e4b40109f6ee13d16472442de03dd15b792e
+2019/11/30 13:25:00 pushed blob: sha256:50024b0106d53dcbd29889c65bc040439b2bb8947dac16c8c670db894a2c5ba6
+2019/11/30 13:25:00 pushed blob: sha256:ff95660c69375e19e287b2ea87ca9b4be008cd036e95d541515262b86cc521d9
+2019/11/30 13:25:00 pushed blob: sha256:1da0ab556051b0a33943e34aa7aec09e19e27258bc09ceb8725ab688eb7ce52e
+2019/11/30 13:25:00 pushed blob: sha256:16ea0e8c887910fe167687a0169991b4c1fc165257aab6b116f6a5e61a64e7af
+2019/11/30 13:25:00 pushed blob: sha256:9c7d0e5c0bc204b3a36e3f8ff320741da0bd0225e0a67e224c6265c1e208f80a
+2019/11/30 13:25:00 pushed blob: sha256:29c4fb388fdfef16e8278fba2b06d46e48d152e1b40f4347c8828a04c8e2a87e
+2019/11/30 13:25:01 172.16.79.192:5000/bernardlai/python-flask-demo:0.0.1: digest: sha256:c0053f550ea7ff5bf67c269b2cbdfc4b2f391e69afce919d345b1df41eeb6c71 size: 2227
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/python-flask-demo to an unshallow repository
+Generating change log from git ref bbbd1a6b99c75e3535233d416069dc46ba9e0d27 => 501d749bb917ff9e10df742567cfa0592a72b8a5
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 2b8e751a0033b9fcfebe8dcc19d4f1db23af1acb with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 2b8e751a0033b9fcfebe8dcc19d4f1db23af1acb with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 1a7ce6961f5e798ee48263fc43f4971dcfbde6e6 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 1a7ce6961f5e798ee48263fc43f4971dcfbde6e6 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit 8a174884e138b368c4b75a307c0f90bf01e81c02 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 8a174884e138b368c4b75a307c0f90bf01e81c02 with issues: users.jenkins.io "x-0" already exists
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit d05ef265c32db8a4f2b5687f7fea34f43d553b15 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit d05ef265c32db8a4f2b5687f7fea34f43d553b15 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 58310602be000eb0b37a267e3752f284fc5b696a with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit 58310602be000eb0b37a267e3752f284fc5b696a with issues: users.jenkins.io "x-0" already exists
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 3e14706d853121b23ae4b2dfd824c01ccbe46dd8 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 3e14706d853121b23ae4b2dfd824c01ccbe46dd8 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit a42e8eb3e3be540d0db37c7f9ddc22327b7f8f84 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit a42e8eb3e3be540d0db37c7f9ddc22327b7f8f84 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: No release found for bernardlai/python-flask-demo and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/bernardlai/python-flask-demo/releases/tag/v0.0.1
+generated: /workspace/source/charts/python-flask-demo/templates/release.yaml
+Created Release python-flask-demo-0-0-1 resource in namespace **
+Updating PipelineActivity bernardlai-python-flask-demo-master-1 with version 0.0.1
+Updated PipelineActivities bernardlai-python-flask-demo-master-1 with release notes URL: https://github.com/bernardlai/python-flask-demo/releases/tag/v0.0.1
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file python-flask-demo-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app python-flask-demo version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/bernardlai/environment-shriekamber-staging/pull/2
+Added label updatebot to Pull Request https://github.com/bernardlai/environment-shriekamber-staging/pull/2
+WARNING: Failed to query the Pull Request last commit status for https://github.com/bernardlai/environment-shriekamber-staging/pull/2 ref 5c3e136c928e0e1935f0dec247469474ee54e498 Could not find a status for repository bernardlai/environment-shriekamber-staging with ref 5c3e136c928e0e1935f0dec247469474ee54e498
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/2
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/2
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/2
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/2
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/2
+Pull Request https://github.com/bernardlai/environment-shriekamber-staging/pull/2 is merged at sha b734b27d7bba03effc4bf8e2b1455afc04762a42
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names python-flask-demo, **-python-flask-demo, **-staging-python-flask-demo
