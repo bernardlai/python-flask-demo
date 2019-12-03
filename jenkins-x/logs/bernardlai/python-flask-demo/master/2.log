@@ -1,0 +1,143 @@
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-2jkbl[0m
+{"level":"warn","ts":1575364701.4330063,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575364701.433627,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-nwplt[0m
+{"level":"warn","ts":1575364702.1858768,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1575364702.1871028,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-bernardlai-python-flask-demo-ma-mq5n2[0m
+{"level":"warn","ts":1575364725.40591,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575364726.6918576,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/bernardlai/python-flask-demo.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3d605feee586c3c01991775e3f610727d8e81788
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:3.7            
+2019/12/03 09:18:55 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Error while retrieving image from cache: getting file info: stat /workspace/sha256:c3224f1163e8c349b5f7345090c9753b58c779de446d79232859cc3a68d63167: no such file or directory 
+[36mINFO[0m[0003] Downloading base image python:3.7            
+2019/12/03 09:18:58 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0005] Checking for cached layer 172.16.79.192:5000/todo/cache:3345997b9c2cfef91d5e8a9b1acd426b072dbde7ba183357313ba55327126f65... 
+2019/12/03 09:19:00 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0006] Using caching version of cmd: RUN mkdir /app 
+[36mINFO[0m[0006] Using files from context: [/workspace/source] 
+[36mINFO[0m[0006] Checking for cached layer 172.16.79.192:5000/todo/cache:655ced34830bda6ef222325cef50094cfffa2b49ff46139b89d14a1f75627527... 
+2019/12/03 09:19:01 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0006] No cached layer found for cmd RUN pip install -r requirements.txt 
+[36mINFO[0m[0006] Unpacking rootfs as cmd RUN pip install -r requirements.txt requires it. 
+[36mINFO[0m[0038] Taking snapshot of full filesystem...        
+[36mINFO[0m[0162] RUN mkdir /app                               
+[36mINFO[0m[0162] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0162] Taking snapshot of files...                  
+[36mINFO[0m[0164] WORKDIR /app                                 
+[36mINFO[0m[0164] cmd: workdir                                 
+[36mINFO[0m[0164] Changed working directory to /app            
+[36mINFO[0m[0164] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0164] Using files from context: [/workspace/source] 
+[36mINFO[0m[0164] ADD . /app/                                  
+[36mINFO[0m[0164] Taking snapshot of files...                  
+[36mINFO[0m[0164] RUN pip install -r requirements.txt          
+[36mINFO[0m[0164] cmd: /bin/sh                                 
+[36mINFO[0m[0164] args: [-c pip install -r requirements.txt]   
+Collecting Flask==1.0
+  Downloading https://files.pythonhosted.org/packages/55/b1/4365193655df97227ace49311365cc296e74b60c7f5c63d23cd30175e2f6/Flask-1.0-py2.py3-none-any.whl (97kB)
+Collecting itsdangerous>=0.24
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting Jinja2>=2.10
+  Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
+Collecting click>=5.1
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting Werkzeug>=0.14
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+Collecting MarkupSafe>=0.23
+  Downloading https://files.pythonhosted.org/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl
+Installing collected packages: itsdangerous, MarkupSafe, Jinja2, click, Werkzeug, Flask
+Successfully installed Flask-1.0 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 click-7.0 itsdangerous-1.1.0
+[36mINFO[0m[0166] Taking snapshot of full filesystem...        
+[36mINFO[0m[0175] EXPOSE 5000                                  
+[36mINFO[0m[0175] cmd: EXPOSE                                  
+[36mINFO[0m[0175] Adding exposed port: 5000/tcp                
+[36mINFO[0m[0175] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0175] CMD ["python","/app/main.py"]                
+[36mINFO[0m[0175] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0175] Pushing layer 172.16.79.192:5000/todo/cache:655ced34830bda6ef222325cef50094cfffa2b49ff46139b89d14a1f75627527 to cache now 
+2019/12/03 09:21:53 pushed blob: sha256:3983e40601231369427b8e9c0c2558d15ee3971b6bd6a0117b99bd723fd44cd8
+2019/12/03 09:21:53 pushed blob: sha256:c5e757ff50b574e9f5e20cc0f5d4f492ce402ec2f737cdd8b8d6772ebf90060a
+2019/12/03 09:21:53 172.16.79.192:5000/todo/cache:655ced34830bda6ef222325cef50094cfffa2b49ff46139b89d14a1f75627527: digest: sha256:4b7349a73e578ab4557a30d48dab86d616175da3b3bb719ccdfcdd4d9529e56d size: 428
+2019/12/03 09:21:53 existing blob: sha256:ff95660c69375e19e287b2ea87ca9b4be008cd036e95d541515262b86cc521d9
+2019/12/03 09:21:53 existing blob: sha256:29c4fb388fdfef16e8278fba2b06d46e48d152e1b40f4347c8828a04c8e2a87e
+2019/12/03 09:21:53 existing blob: sha256:50024b0106d53dcbd29889c65bc040439b2bb8947dac16c8c670db894a2c5ba6
+2019/12/03 09:21:53 existing blob: sha256:8659dae93050c1ac9ec02542a046e4b40109f6ee13d16472442de03dd15b792e
+2019/12/03 09:21:53 existing blob: sha256:44f6aadcf7465b211ddddffb0041678e069b3c2b1e6b1a5db75277fc19d6ffe6
+2019/12/03 09:21:53 existing blob: sha256:1da0ab556051b0a33943e34aa7aec09e19e27258bc09ceb8725ab688eb7ce52e
+2019/12/03 09:21:53 existing blob: sha256:c648cb7fc575dd1e2a3b60c09fbac445bf8f182f5ae069a7e5aea4fba54c00fe
+2019/12/03 09:21:53 existing blob: sha256:16ea0e8c887910fe167687a0169991b4c1fc165257aab6b116f6a5e61a64e7af
+2019/12/03 09:21:53 existing blob: sha256:e92ae9350d4a47e5dcfbae78a0a06db3691fa602e93e7e6f6094ff187ca1cfd0
+2019/12/03 09:21:53 existing blob: sha256:9c7d0e5c0bc204b3a36e3f8ff320741da0bd0225e0a67e224c6265c1e208f80a
+2019/12/03 09:21:54 pushed blob: sha256:8359b939b23425c6eb388d4d63075f00c8b82a142f08a6f224a66bbe5462b224
+2019/12/03 09:21:54 pushed blob: sha256:52711f8e649efa14d317c449b51ba66a117c04f7a3dba4b094e8dd943d16ec9b
+2019/12/03 09:21:54 pushed blob: sha256:c5e757ff50b574e9f5e20cc0f5d4f492ce402ec2f737cdd8b8d6772ebf90060a
+2019/12/03 09:21:55 172.16.79.192:5000/bernardlai/python-flask-demo:0.0.2: digest: sha256:342e7588d0bbe6538ec528f1b83dac83271d26ebfc4838485abd86e9ba16369a size: 2227
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/python-flask-demo to an unshallow repository
+Generating change log from git ref 501d749bb917ff9e10df742567cfa0592a72b8a5 => 721f057920a9620931cfecc809b3483b5c44c653
+Associating user x-0 in users.jenkins.io with email ********************** to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 3d605feee586c3c01991775e3f610727d8e81788 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit 3d605feee586c3c01991775e3f610727d8e81788 with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for bernardlai/python-flask-demo and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/bernardlai/python-flask-demo/releases/tag/v0.0.2
+generated: /workspace/source/charts/python-flask-demo/templates/release.yaml
+Created Release python-flask-demo-0-0-2 resource in namespace **
+Updating PipelineActivity bernardlai-python-flask-demo-master-2 with version 0.0.2
+Updated PipelineActivities bernardlai-python-flask-demo-master-2 with release notes URL: https://github.com/bernardlai/python-flask-demo/releases/tag/v0.0.2
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file python-flask-demo-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mbernardlai-python-flask-demo-ma-9dml5-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app python-flask-demo version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+Added label updatebot to Pull Request https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+WARNING: Failed to query the Pull Request last commit status for https://github.com/bernardlai/environment-shriekamber-staging/pull/3 ref b9a6619d1d4589485f9d4384cc0e037ec938f8d0 Could not find a status for repository bernardlai/environment-shriekamber-staging with ref b9a6619d1d4589485f9d4384cc0e037ec938f8d0
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+got git provider status pending from PR https://github.com/bernardlai/environment-shriekamber-staging/pull/3
+Pull Request https://github.com/bernardlai/environment-shriekamber-staging/pull/3 is merged at sha 29825f7d3f222e5949aa505f2d673151ca011f35
+Pull Request merged but we are not waiting for the update pipeline to complete!
