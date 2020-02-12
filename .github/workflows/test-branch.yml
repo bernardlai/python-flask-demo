@@ -6,17 +6,24 @@ on:
       - master
 jobs:
   job1:
+    runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
     - name: Print a greeting
     env:
       MY_VAR: Hi there! My name is
       FIRST_NAME: Mona
       MIDDLE_NAME: The
       LAST_NAME: Octocat
+    
     run: |
       echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+      
   job2:
+    runs-on: ubuntu-latest
+    
     steps:
+    - uses: actions/checkout@v1
     - name: Print a greeting
     env:
       MY_VAR: Hi there! My name is
@@ -26,13 +33,17 @@ jobs:
     run: |
       echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
   job3:
+    runs-on: ubuntu-latest
     needs: [job1, job2]
     steps:
+      - run
+    - uses: actions/checkout@v1
     - name: Print a greeting
-    env:
+env:
       MY_VAR: Hi there! My name is
       FIRST_NAME: Mona
       MIDDLE_NAME: The
       LAST_NAME: Octocat
-    run: |
+    
+    -
       echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
