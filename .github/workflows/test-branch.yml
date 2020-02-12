@@ -1,0 +1,38 @@
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+jobs:
+  job1:
+    steps:
+    - name: Print a greeting
+    env:
+      MY_VAR: Hi there! My name is
+      FIRST_NAME: Mona
+      MIDDLE_NAME: The
+      LAST_NAME: Octocat
+    run: |
+      echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+  job2:
+    steps:
+    - name: Print a greeting
+    env:
+      MY_VAR: Hi there! My name is
+      FIRST_NAME: Mona
+      MIDDLE_NAME: The
+      LAST_NAME: Octocat
+    run: |
+      echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+  job3:
+    needs: [job1, job2]
+    steps:
+    - name: Print a greeting
+    env:
+      MY_VAR: Hi there! My name is
+      FIRST_NAME: Mona
+      MIDDLE_NAME: The
+      LAST_NAME: Octocat
+    run: |
+      echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
