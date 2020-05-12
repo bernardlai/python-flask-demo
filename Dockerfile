@@ -10,6 +10,7 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["python","/app/main.py"]
+CMD ["echo","laihh"]
+#CMD ["python","/app/main.py"]
 
 
