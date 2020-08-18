@@ -12,7 +12,7 @@ build:
 deploy:
   kubectl: {}
 profiles:
-- name: dev
+- name: devv
   build:
     tagPolicy:
       envTemplate:
